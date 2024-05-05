@@ -6,10 +6,6 @@ import titiAudio from '../assets/voice/titit.mp3';
 const AnxietyCard = () => {
   const navigate = useNavigate(); // Hook untuk navigasi
 
-  const handleClick = () => {
-    alert("Ben got your back!");
-  };
-
   const handleBack = () => {
     navigate('/'); // Asumsi path ke MainMenu adalah '/'
   };

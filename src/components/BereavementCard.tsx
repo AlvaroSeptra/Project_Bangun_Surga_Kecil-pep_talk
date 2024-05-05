@@ -1,11 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import suiiiImage from '../assets/pic/suiii.png';
 import titiAudio from '../assets/voice/titit.mp3';
 
 const AnxietyCard = () => {
-  const handleClick = () => {
-    alert("Ben got your back!");
+  const navigate = useNavigate(); // Hook untuk navigasi
+
+  const handleBack = () => {
+    navigate('/'); // Asumsi path ke MainMenu adalah '/'
   };
+
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white p-4 m-4 cursor-pointer">
@@ -20,6 +24,9 @@ const AnxietyCard = () => {
             <source src={titiAudio} type="audio/mp3" />
             Browser Anda tidak mendukung tag audio.
           </audio>
+          <button onClick={handleBack} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Kembali ke Menu Utama
+          </button>
         </div>
       </div>
     </div>
